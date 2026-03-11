@@ -143,7 +143,7 @@ export default function StudentsPage() {
             className="pl-9"
           />
         </div>
-        <Select value={yearFilter} onValueChange={setYearFilter}>
+        <Select value={yearFilter} onValueChange={(val) => setYearFilter(val ?? "all")}>
           <SelectTrigger className="w-full sm:w-[140px]">
             <SelectValue placeholder="Year" />
           </SelectTrigger>
@@ -155,7 +155,7 @@ export default function StudentsPage() {
             <SelectItem value="4">Year 4</SelectItem>
           </SelectContent>
         </Select>
-        <Select value={deptFilter} onValueChange={setDeptFilter}>
+        <Select value={deptFilter} onValueChange={(val) => setDeptFilter(val ?? "all")}>
           <SelectTrigger className="w-full sm:w-[180px]">
             <SelectValue placeholder="Department" />
           </SelectTrigger>

@@ -35,7 +35,7 @@ export default function BulkAssignForm() {
     reset,
     formState: { errors },
   } = useForm<AssignmentSchemaType>({
-    resolver: zodResolver(assignmentSchema),
+    resolver: zodResolver(assignmentSchema) as any,
     defaultValues: {
       courseId: 0,
       studentIds: [{ value: 0 }],

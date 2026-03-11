@@ -43,7 +43,7 @@ export default function BulkGradeForm() {
     reset,
     formState: { errors },
   } = useForm<BulkGradeSchemaType>({
-    resolver: zodResolver(bulkGradeSchema),
+    resolver: zodResolver(bulkGradeSchema) as any,
     defaultValues: {
       courseId: 0,
       grades: [],
@@ -267,7 +267,7 @@ export default function BulkGradeForm() {
                         <Label className="sm:hidden text-xs text-muted-foreground mb-1 block">Grade</Label>
                         <Select
                           value={watch(`grades.${index}.grade` as const)}
-                          onValueChange={(val) => setValue(`grades.${index}.grade` as const, val)}
+                          onValueChange={(val) => setValue(`grades.${index}.grade` as const, val ?? "")}
                         >
                           <SelectTrigger className="h-9">
                             <SelectValue placeholder="-" />

@@ -59,10 +59,8 @@ export default function Header() {
     <header className="sticky top-0 z-30 flex items-center gap-4 h-16 px-4 md:px-6 border-b border-border bg-card/80 backdrop-blur-sm">
       {/* Mobile Menu */}
       <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden">
+        <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden" />}>
             <Menu className="w-5 h-5" />
-          </Button>
         </SheetTrigger>
         <SheetContent side="left" className="w-[260px] p-0">
           <div className="flex items-center gap-3 px-4 h-16 border-b border-border">

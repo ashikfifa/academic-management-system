@@ -124,7 +124,7 @@ export default function FacultyPage() {
             className="pl-9"
           />
         </div>
-        <Select value={deptFilter} onValueChange={setDeptFilter}>
+        <Select value={deptFilter} onValueChange={(val) => setDeptFilter(val ?? "all")}>
           <SelectTrigger className="w-full sm:w-[200px]">
             <SelectValue placeholder="Department" />
           </SelectTrigger>
