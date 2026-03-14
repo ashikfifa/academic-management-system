@@ -2,6 +2,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### API Configuration
+
+This app proxies requests from `/api/*` to your backend using `next.config.ts`.
+
+- Local development default backend: `http://localhost:4000`
+- Override backend URL with env var: `API_SERVER_URL`
+
+Example `.env.local`:
+
+```bash
+API_SERVER_URL=http://localhost:4000
+```
+
+For Vercel deployment, set `API_SERVER_URL` in Project Settings -> Environment Variables to your deployed backend URL (not localhost).
+
 First, run the development server:
 
 ```bash
